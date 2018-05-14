@@ -1,0 +1,55 @@
+.parts {
+  font-size: 1.5rem;
+  padding: 1rem 2rem;
+
+
+  &__picker {
+    margin: 1rem;
+    display: flex;
+    &:not(:last-child) {
+      margin-right: 1rem;
+    }
+  }
+
+  &__label {
+    min-width: 10rem;
+  }
+
+  &__btn {
+    cursor: pointer;
+    border: none;
+    width: 10rem;
+  }
+}
+
+
+.unicorn__parts {
+  height: 5rem;
+  width: 5rem;
+  animation: 2s ease-out backwards fadeIn;
+
+  &-list {
+    display: flex;
+    transition: all .2s;
+    height: 10rem;
+    width: 100%;
+  }
+
+  &-hair {
+
+  }
+
+  &-hooves {
+
+  }
+
+  &-tail {
+
+  }
+
+  &-horn {
+    background: url('../img/horn.png');
+    background-size: cover;
+
+  }
+}

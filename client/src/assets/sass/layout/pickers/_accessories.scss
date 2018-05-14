@@ -1,0 +1,40 @@
+.accessory {
+  &__undo,
+  &__btn,
+  &__item {
+    cursor: pointer;
+    font-size: 1.5rem;
+    padding: 1rem;
+    margin: .5rem 0;
+  }
+
+  &__list {
+    transition: all .2s;
+  }
+
+  &__item {
+
+    display: inline-block;
+    animation: 2s ease-out backwards fadeIn;
+
+
+    &-bowtie {
+      background: url('../img/bowtie.png');
+      background-size: contain;
+      background-repeat: no-repeat;
+    }
+
+    &-glasses {
+      background: url('../img/glasses.png');
+      background-size: contain;
+      background-repeat: no-repeat;
+    }
+
+    &-hat {
+      background: url('../img/hat.png');
+      background-size: contain;
+      background-repeat: no-repeat;
+    }
+  }
+
+}

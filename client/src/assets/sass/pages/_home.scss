@@ -1,0 +1,27 @@
+.home__container {
+  @include flexCenter;
+  flex-direction: column;
+
+  @media only screen and (min-width: 75em) {
+
+  }
+}
+
+//-------------------------------------
+// Landing
+//-------------------------------------
+.landing {
+  &__castle {
+
+      cursor: pointer;
+      width: 100%;
+      padding: 2rem;
+
+      transition: all .5s;
+      max-width: 60rem;
+
+      &:hover{
+        transform: scale(1.05);
+      }
+  }
+}

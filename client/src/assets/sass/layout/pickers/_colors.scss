@@ -1,0 +1,76 @@
+.unicorn {
+  font-size: 2rem;
+  height: 30rem;
+  width: 30rem;
+  color: #777;
+
+    margin: 5rem 0;
+
+    background: url('../img/Unicorn.png');
+    background-size: cover;
+    background-position: center;
+    animation: 2s ease-out backwards fadeIn;
+
+
+    &__container {
+      position: relative;
+      transition: all .2s;
+    }
+
+   &__color {
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     width: 7rem;
+     height: 7rem;
+
+     border-radius: 50%;
+     color: rgba(#777, .9);
+     cursor: pointer;
+     font-size: 2rem;
+     margin: 1rem;
+     padding: 1rem;
+
+     animation: 2s ease-out backwards fadeIn;
+
+     &-list {
+       transition: all .1s;
+       display: flex;
+       flex-wrap: wrap;
+       max-width: 30rem;
+     }
+
+     &:hover {
+       transform: translateY(-0.4rem);
+     }
+
+     &-black {
+         background-color: #000;
+
+     }
+
+     &-white{
+         background-color: #fff;
+     }
+
+     &-purple {
+         background-color: purple;
+     }
+
+     &-pink {
+       background-color: fuchsia;
+     }
+
+     &-blue{
+       background-color: aqua;
+     }
+
+     &-brown {
+       filter: sepia(100%);
+     }
+
+     &-rainbow {
+       background: linear-gradient(to right, orange , yellow, green, cyan, blue, violet);
+     }
+  }
+}

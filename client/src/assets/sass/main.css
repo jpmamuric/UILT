@@ -1,0 +1,170 @@
+/*
+
+  0    - 600px  Phone
+  600  - 900px  Tablet Portrait
+  900  - 1200px Tablet Landscape
+  1200 - 1800px Desktop (normal desktop first approach)
+  1800 + Big Desktop
+
+
+$breakpoint argument choices:
+ phone
+ tablet-portrait
+ tablet-landscape
+ desktop
+
+ em = best choice for media queries
+ 1em = 16px
+*/
+@keyframes fadeIn {
+  0% {
+    visibility: hidden;
+    opacity: 0; }
+  100% {
+    visibility: visible;
+    opacity: 1; } }
+
+html {
+  box-sizing: border-box;
+  font-size: 62.5%; }
+
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit; }
+
+a {
+  text-decoration: none; }
+
+body {
+  background-color: #eee; }
+
+/**
+ * Clear inner floats
+ */
+.clearfix::after {
+  clear: both;
+  content: '';
+  display: table; }
+
+.builder__container {
+  display: flex;
+  flex-direction: column; }
+
+.accessory__undo, .accessory__btn, .accessory__item {
+  cursor: pointer;
+  font-size: 1.5rem;
+  padding: 1rem;
+  margin: .5rem 0; }
+
+.accessory__list {
+  transition: all .2s; }
+
+.accessory__item {
+  display: inline-block;
+  animation: 2s ease-out backwards fadeIn; }
+  .accessory__item-bowtie {
+    background: url("../img/bowtie.png");
+    background-size: contain;
+    background-repeat: no-repeat; }
+  .accessory__item-glasses {
+    background: url("../img/glasses.png");
+    background-size: contain;
+    background-repeat: no-repeat; }
+  .accessory__item-hat {
+    background: url("../img/hat.png");
+    background-size: contain;
+    background-repeat: no-repeat; }
+
+.unicorn {
+  font-size: 2rem;
+  height: 30rem;
+  width: 30rem;
+  color: #777;
+  margin: 5rem 0;
+  background: url("../img/Unicorn.png");
+  background-size: cover;
+  background-position: center;
+  animation: 2s ease-out backwards fadeIn; }
+  .unicorn__container {
+    position: relative;
+    transition: all .2s; }
+  .unicorn__color {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 7rem;
+    height: 7rem;
+    border-radius: 50%;
+    color: rgba(119, 119, 119, 0.9);
+    cursor: pointer;
+    font-size: 2rem;
+    margin: 1rem;
+    padding: 1rem;
+    animation: 2s ease-out backwards fadeIn; }
+    .unicorn__color-list {
+      transition: all .1s;
+      display: flex;
+      flex-wrap: wrap;
+      max-width: 30rem; }
+    .unicorn__color:hover {
+      transform: translateY(-0.4rem); }
+    .unicorn__color-black {
+      background-color: #000; }
+    .unicorn__color-white {
+      background-color: #fff; }
+    .unicorn__color-purple {
+      background-color: purple; }
+    .unicorn__color-pink {
+      background-color: fuchsia; }
+    .unicorn__color-blue {
+      background-color: aqua; }
+    .unicorn__color-brown {
+      filter: sepia(100%); }
+    .unicorn__color-rainbow {
+      background: linear-gradient(to right, orange, yellow, green, cyan, blue, violet); }
+
+.parts {
+  font-size: 1.5rem;
+  padding: 1rem 2rem; }
+  .parts__picker {
+    margin: 1rem;
+    display: flex; }
+    .parts__picker:not(:last-child) {
+      margin-right: 1rem; }
+  .parts__label {
+    min-width: 10rem; }
+  .parts__btn {
+    cursor: pointer;
+    border: none;
+    width: 10rem; }
+
+.unicorn__parts {
+  height: 5rem;
+  width: 5rem;
+  animation: 2s ease-out backwards fadeIn; }
+  .unicorn__parts-list {
+    display: flex;
+    transition: all .2s;
+    height: 10rem;
+    width: 100%; }
+  .unicorn__parts-horn {
+    background: url("../img/horn.png");
+    background-size: cover; }
+
+.home__container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column; }
+
+.landing__castle {
+  cursor: pointer;
+  width: 100%;
+  padding: 2rem;
+  transition: all .5s;
+  max-width: 60rem; }
+  .landing__castle:hover {
+    transform: scale(1.05); }

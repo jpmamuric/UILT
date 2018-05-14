@@ -25,7 +25,7 @@ passport.use(new GoogleStrategy({
     proxy: true
   },
   async (accessToken, refreshToken, profile, done) => {
-    const existingUser = await Users.findOne({ googleId: profile.id });
+    const existingUser = await Users.findOne({ googleID: profile.id });
 
     if(existingUser) {
       return done(null, existingUser);
