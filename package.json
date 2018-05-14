@@ -9,7 +9,9 @@
   },
   "scripts": {
     "start": "node index.js",
-    "server": "nodemon index.js",
+    "server-start": "nodemon index.js",
+    "client-start":"npm run start --prefix client",
+    "dev": "concurrently \"npm run server-start\" \"npm run client-start\"",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Jan Peter Mamuric",
